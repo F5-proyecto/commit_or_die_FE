@@ -6,7 +6,7 @@ const ContactForm = () => {
       
    
       <div className="w-full max-w-lg p-8 rounded-2xl bg-blue-3 shadow-lg">
-        <h2 className="font-briem-hand text-3xl text-white mb-2">Formulario de contacto</h2>
+        <h2 className="text-3xl font-bold text-white mb-2">Rellena el formulario</h2>
         <form className="flex flex-col gap-6 text-white">
           <div>
             <label className="block mb-2">Nombre Completo</label>
