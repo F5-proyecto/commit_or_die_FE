@@ -27,10 +27,14 @@
 }
 
 .main-layout {
-    @apply min-h-screen bg-blue-1 bg-no-repeat bg-cover;
-    background-image: url("../assets/img/bg.svg");
+  @apply min-h-screen bg-blue-1 bg-no-repeat bg-cover;
+  background-image: url("../assets/img/bg.svg");
 }
 
+.form-bg {
+  @apply bg-no-repeat bg-cover;
+  background-image: url("../assets/img/form-bg.svg");
+}
 
 .button-custom {
     padding: 8px; 

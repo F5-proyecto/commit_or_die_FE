@@ -1,58 +1,90 @@
-export default function ContactForm() {
-    return(
-        <div className="flex min-h-screen items center justify-center bg-gray-100">
-            <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Log in</h2>
-                <form>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 font-medium mb-2">full name</label>
-                        <input 
-                            type="email"
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="write your name"
-                            required
-                        />
-            </div>               
-            <div className="mb-4">
-            <label className="block text-gray-700 font-medium mb-2">e-mail</label>
-            <input 
-              type="email" 
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="write your email" 
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+
+const ContactForm = () => {
+  return (
+    <div className="flex flex-col lg:flex-row min-h-screen items-center justify-center p-6 sm:p-12 font-afacad gap-12">
+      
+   
+      <div className="w-full max-w-lg p-8 rounded-2xl bg-blue-3 shadow-lg">
+        <h1 className="font-briem-hand text-3xl text-white mb-2">Formulario de contacto</h1>
+        <form className="flex flex-col gap-6 text-white">
+          <div>
+            <label className="block mb-2">Nombre Completo</label>
+            <input
+              type="text"
+              className="w-full px-4 py-3 rounded-lg bg-white placeholder-blue-2 text-blue-2 focus:outline-none focus:ring-2 focus:ring-white"
+              placeholder="Escribe tu nombre"
               required
             />
           </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 font-medium mb-2">message</label>
-            <textarea 
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="write your message" 
+          <div>
+            <label className="block mb-2">Correo Electrónico</label>
+            <input
+              type="email"
+              className="w-full px-4 py-3 rounded-lg bg-white placeholder-blue-2 text-blue-2 focus:outline-none focus:ring-2 focus:ring-white"
+              placeholder="Escribe tu correo electrónico"
+              required
+            />
+          </div>
+          <div>
+            <label className="block mb-2">Asunto</label>
+            <input
+              type="text"
+              className="w-full px-4 py-3 rounded-lg bg-white placeholder-blue-2 text-blue-2 focus:outline-none focus:ring-2 focus:ring-white"
+              placeholder="Escribe el asunto"
+              required
+            />
+          </div>
+          <div>
+            <label className="block mb-2">Mensaje</label>
+            <textarea
+              className="w-full px-4 py-3 rounded-lg bg-white placeholder-blue-2 text-blue-2 focus:outline-none focus:ring-2 focus:ring-white"
+              placeholder="Escribe tu mensaje"
               rows="4"
               required
             ></textarea>
           </div>
-          <button 
-            type="submit" 
-            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300"
-          >
-             </button>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="w-full sm:w-1/2 bg-blue-2 text-white py-3 rounded-lg hover:scale-105 transition transform"
+            >
+              Enviar
+            </button>
+          </div>
         </form>
-        
-        <div className="text-center text-gray-600 mt-6">
-          <p><strong>e-mail:</strong> techcodelab@gmail.com</p>
-          <p><strong>Telephone:</strong> +1 (555) 123-4567</p>
-          <p><strong>location:</strong> Factoría F5 Asturias</p>
+      </div>
+
+ 
+      <div className="w-full max-w-lg p-12 text-center lg:text-left text-blue-3 lg:self-start">
+        <h2 className="text-4xl sm:text-5xl font-briem-hand mb-4">Contáctanos</h2>
+        <p className="text-lg sm:text-xl mb-12">Estamos aquí para ayudarte</p>
+        <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start gap-12 text-center lg:text-left">
+          <div className="flex flex-col items-center lg:items-start">
+            <p className="flex items-center gap-2 text-lg sm:text-xl">
+              <FaEnvelope className="w-6 h-6" />
+              <strong>E-mail:</strong>
+            </p>
+            <span className="text-blue-2">techcodelab@gmail.com</span>
+          </div>
+          <div className="flex flex-col items-center lg:items-start">
+            <p className="flex items-center gap-2 text-lg sm:text-xl">
+              <FaPhone className="w-6 h-6" />
+              <strong>Teléfono:</strong>
+            </p>
+            <span className="text-blue-2">+1 (555) 123-4567</span>
+          </div>
+          <div className="flex flex-col items-center lg:items-start">
+            <p className="flex items-center gap-2 text-lg sm:text-xl">
+              <FaMapMarkerAlt className="w-6 h-6" />
+              <strong>Localización:</strong>
+            </p>
+            <span className="text-blue-2">Factoría F5 Asturias</span>
+          </div>
         </div>
-        <footer className="text-center text-gray-500 mt-6">
-          <p><strong>TechCodeLab</strong></p>
-          <p><a href="#" className="text-blue-500 hover:underline">about us</a> | <a href="#" className="text-blue-500 hover:underline">GitHub</a> | <a href="#" className="text-blue-500 hover:underline">Contáctanos</a></p>
-          <p className="mt-2">© 2025 Commit or Die. All rights reserved.</p>
-        </footer>
       </div>
     </div>
   );
 }
 
-        
-
-
+export default ContactForm;
