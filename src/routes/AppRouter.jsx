@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import CoursesFrontendPage from "../pages/CoursesFrontendPage";
 import CoursesBackendPage from "../pages/CoursesBackendPage";
 import CoursesTddPage from "../pages/CoursesTddPage";
+import Tdd from "../pages/resources/Tdd";
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
           <Route path="/services/front-end" element={<CoursesFrontendPage />} />
           <Route path="/services/back-end" element={<CoursesBackendPage />} />
           <Route path="/services/testing" element={<CoursesTddPage />} />
+          <Route path="/services/testing/tdd" element={<Tdd />} />
           <Route path="/sobre-nosotros" element={<AboutUs />} />   
         </Route>
         <Route element={<SimpleLayout />}>
