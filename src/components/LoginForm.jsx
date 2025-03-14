@@ -55,8 +55,8 @@ const LoginForm = () => {
                     Inicia Sesión
                 </button>
 
-                <p className="text-center text-gray-600 mt-4">
-                  ¿No tienes cuenta? <Link to="/registro" className="text-blue-500 hover:underline">Regístrate</Link>
+                <p className="text-center text-gray-600 mt-10 text-xl">
+                  ¿No tienes cuenta? <Link to="/registro" className="text-blue-3 hover:underline">Regístrate</Link>
                 </p>
 
             </form>

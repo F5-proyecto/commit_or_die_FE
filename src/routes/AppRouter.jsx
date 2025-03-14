@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import SimpleLayout from "../layouts/SimpleHeaderLayout";
 import Home from "../pages/Home";
 import ContactUs from "../pages/ContactUs";
+import AboutUs from "../pages/AboutUs";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import CoursesFrontendPage from "../pages/CoursesFrontendPage";
@@ -19,7 +20,7 @@ const AppRouter = () => {
           <Route path="/services/front-end" element={<CoursesFrontendPage />} />
           <Route path="/services/back-end" element={<CoursesBackendPage />} />
           <Route path="/services/testing" element={<CoursesTddPage />} />
-          {/* <Route path="/" element={<Home />} />    */}
+          <Route path="/sobre-nosotros" element={<AboutUs />} />   
         </Route>
         <Route element={<SimpleLayout />}>
           <Route path="/registro" element={<Register />} />

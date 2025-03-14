@@ -6,7 +6,7 @@ const ContactForm = () => {
       
    
       <div className="w-full max-w-lg p-8 rounded-2xl bg-blue-3 shadow-lg">
-        <h1 className="font-briem-hand text-3xl text-white mb-2">Formulario de contacto</h1>
+        <h2 className="font-briem-hand text-3xl text-white mb-2">Formulario de contacto</h2>
         <form className="flex flex-col gap-6 text-white">
           <div>
             <label className="block mb-2">Nombre Completo</label>
@@ -55,27 +55,27 @@ const ContactForm = () => {
         </form>
       </div>
 
- 
+
       <div className="w-full max-w-lg p-12 text-center lg:text-left text-blue-3 lg:self-start">
-        <h2 className="text-4xl sm:text-5xl font-briem-hand mb-4">Contáctanos</h2>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-briem-hand mb-4">Contacta con nosotros</h1>
         <p className="text-lg sm:text-xl mb-12">Estamos aquí para ayudarte</p>
         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start gap-12 text-center lg:text-left">
           <div className="flex flex-col items-center lg:items-start">
-            <p className="flex items-center gap-2 text-lg sm:text-xl">
+            <p className="flex items-center gap-2 text-lg sm:text-xl lg:text-2xl">
               <FaEnvelope className="w-6 h-6" />
               <strong>E-mail:</strong>
             </p>
             <span className="text-blue-2">techcodelab@gmail.com</span>
           </div>
           <div className="flex flex-col items-center lg:items-start">
-            <p className="flex items-center gap-2 text-lg sm:text-xl">
+            <p className="flex items-center gap-2 text-lg sm:text-xl lg:text-2xl">
               <FaPhone className="w-6 h-6" />
               <strong>Teléfono:</strong>
             </p>
             <span className="text-blue-2">+1 (555) 123-4567</span>
           </div>
           <div className="flex flex-col items-center lg:items-start">
-            <p className="flex items-center gap-2 text-lg sm:text-xl">
+            <p className="flex items-center gap-2 text-lg sm:text-xl lg:text-2xl">
               <FaMapMarkerAlt className="w-6 h-6" />
               <strong>Localización:</strong>
             </p>
