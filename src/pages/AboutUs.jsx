@@ -6,31 +6,31 @@ const AboutUs = () => {
       name: "Jose Romero",
       role: "Desarrollador Web y Creador de Contenido",
       image: "src/assets/img/profile/Jose.svg",
-      linkedin: "", 
+      linkedin: "https://www.linkedin.com/in/jose-romero-diaz/", 
     },
     {
       name: "Celia Garrido",
       role: "CEO y Fundadora",
       image: "src/assets/img/profile/Celia.svg",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/celia-garrido-herrera/",
     },
     {
       name: "Yeferson Gaviria",
       role: "Desarrollador Web",
       image: "src/assets/img/profile/Yeferson.svg",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/yefgav/",
     },
     {
       name: "Karina Reyes",
       role: "Diseñadora y Desarrolladora Web",
       image: "src/assets/img/profile/Karina.svg",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/karina-lorenzo/",
         },
     {
       name: "Emma Lanza",
       role: "Desarrolladora Web",
       image: "src/assets/img/profile/Emma.svg",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/emma-lanza-m/",
         },
     ];
 
