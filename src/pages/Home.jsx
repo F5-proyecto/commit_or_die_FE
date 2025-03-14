@@ -5,6 +5,7 @@ import java from "../assets/img/courses/java.svg";
 import react from "../assets/img/courses/react.svg";
 import springboot from "../assets/img/courses/springboot.svg";
 import testing from "../assets/img/courses/testing.svg";
+import NavButton from "../components/NavButton";
 
 const courseImages = [
   { src: javascript, alt: "JavaScript" },
@@ -21,7 +22,7 @@ const Home = () => {
 
       <section className="flex flex-col md:flex-row justify-evenly items-center gap-4 py-20 font-afacad px-4 md:px-12">
         <div className="text-center md:text-left">
-          <h1 className="text-4xl sm:text-4xl lg:text-6xl 2xl:text-9xl text-aqua font-briem-hand mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-9xl text-aqua font-briem-hand mb-6">
             TechCodeLab
           </h1>
           <h2 className="text-xl sm:text-xl lg:text-3xl 2xl:text-4xl text-blue-2 font-bold">
@@ -33,9 +34,14 @@ const Home = () => {
             paso, enfrentando retos y creando soluciones reales. No importa tu
             nivel inicial, lo único que necesitas es la motivación para empezar.
           </p>
-          <button className="bg-blue-3 text-white my-4 button-custom">
+          <NavButton
+            to="/login"
+            className="bg-blue-3 text-white my-4 button-custom
+            w-2/3 rounded-md p-2 transition transform hover:scale-105"
+            onClickCloseMenu={() => setIsMenuOpen(false)}
+          >
             Empieza ya
-          </button>
+          </NavButton>
         </div>
 
         <div className="flex justify-center mt-8 md:mt-0">
