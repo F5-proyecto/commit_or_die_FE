@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-
+import React, { useState } from 'react';    
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [form, setForm] = useState({
@@ -8,9 +8,13 @@ const Register = () => {
         email: "",
         password: "",
     });
+
+    const navigate = useNavigate();
+
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         
@@ -18,31 +22,38 @@ const Register = () => {
             alert("Por favor, completa todos los campos.");
             return;
         }
-    
-        // try {
-        //     const response = await fetch("/api/register", {
-        //         method: "POST",
-        //         headers: {
-        //             "Content-Type": "application/json",
-        //         },
-        //         body: JSON.stringify(form),
-        //     });
-    
-        //     if (!response.ok) {
-        //         throw new Error("Error en el registro");
-        //     }
-    
-        //     const data = await response.json();
-        //     console.log("Usuario registrado:", data);
-    
-        //     // Aquí podrías guardar el token en sessionStorage o cookies si el backend lo devuelve
-        //     // sessionStorage.setItem("authToken", data.token);
-    
-        // } catch (error) {
-        //     console.error("Error:", error);
-        // }
+        
+        
+        const user = {
+            name: `${form.name} ${form.lastName}`,
+            email: form.email,
+            password: form.password,
+            role: "USER" 
+        };
+
+        try {
+            const response = await fetch("http://localhost:8080/auth/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user),
+            });
+
+            if (!response.ok) {
+                throw new Error("Error en el registro");
+            }
+
+            const data = await response.json();
+            console.log("Usuario registrado:", data);
+
+            navigate("/login");
+            
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
-    
+
     return (
         <div className="flex justify-center items-center font-afacad px-4 sm:px-6 md:px-10">
             <form onSubmit={handleSubmit} className="bg-white p-16 rounded-lg shadow-lg w-full max-w-3xl flex flex-col form-bg">
@@ -90,12 +101,7 @@ const Register = () => {
                 </button>
             </form>
         </div>
-
     );
-
 };
 
 export default Register;
-
-
-    
