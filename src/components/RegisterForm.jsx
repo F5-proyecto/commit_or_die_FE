@@ -3,61 +3,96 @@ import React, { useState } from 'react';
 
 const Register = () => {
     const [form, setForm] = useState({
-        name:"",
-        lastName:"",
-        email:"",
-        password:"",
+        name: "",
+        lastName: "",
+        email: "",
+        password: "",
     });
     const handleChange = (e) => {
-        setForm({...form, [e.target.name]: e.target.value});
+        setForm({ ...form, [e.target.name]: e.target.value });
     };
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(form);
+        
+        if (!form.name || !form.lastName || !form.email || !form.password) {
+            alert("Por favor, completa todos los campos.");
+            return;
+        }
+    
+        // try {
+        //     const response = await fetch("/api/register", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify(form),
+        //     });
+    
+        //     if (!response.ok) {
+        //         throw new Error("Error en el registro");
+        //     }
+    
+        //     const data = await response.json();
+        //     console.log("Usuario registrado:", data);
+    
+        //     // Aquí podrías guardar el token en sessionStorage o cookies si el backend lo devuelve
+        //     // sessionStorage.setItem("authToken", data.token);
+    
+        // } catch (error) {
+        //     console.error("Error:", error);
+        // }
     };
+    
     return (
-        <div className="flex justify-center items-center min-h-sceen bg-gray-200">
-            <form onSubmit={handleSubmit} className= "bg-white p-8 rounded-lg shadow-lg w-80">
-              <h2 className="text-center text-2x1 font-bold mb-4">RegisterFree</h2>  
+        <div className="flex justify-center items-center font-afacad px-4 sm:px-6 md:px-10">
+            <form onSubmit={handleSubmit} className="bg-white p-16 rounded-lg shadow-lg w-full max-w-3xl flex flex-col form-bg">
+                <h2 className="text-left text-3xl font-bold mb-6 font-briem-hand text-blue-3">Regístrate gratis</h2>
+                <div className='flex flex-col sm:flex-row md:gap-6'>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Nombre"
+                        value={form.name}
+                        onChange={handleChange}
+                        className="w-full p-2 mb-4 border border-blue-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-2 placeholder-blue-3"
+                    />
+                    <input
+                        type="text"
+                        name="lastName"
+                        placeholder="Apellidos"
+                        value={form.lastName}
+                        onChange={handleChange}
+                        className="w-full p-2 mb-4 border border-blue-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-2 placeholder-blue-3"
+                    />
+                </div>
+
                 <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={form.name}
-                onChange={handleChange}
-                className="w-full p-3 mb-3 borde-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                />
-                <input 
-                type="text"
-                name="lastName"
-                placeholder="Last Name"
-                value={form.lastName}
-                onChange={handleChange}
-                className="w-full p-3 mb-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    type="email"
+                    name="email"
+                    placeholder="Correo Electrónico"
+                    value={form.email}
+                    onChange={handleChange}
+                    className="w-full p-2 mb-4 border border-blue-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-2  placeholder-blue-3"
                 />
                 <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={form.email}
-                onChange={handleChange}
-                className="w-full p-3 mb-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    type="password"
+                    name="password"
+                    placeholder="Contraseña"
+                    value={form.password}
+                    onChange={handleChange}
+                    className="w-full p-2 mb-4 border border-blue-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-2  placeholder-blue-3"
                 />
-                 <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={handleChange}
-          className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-            <button
-          type="submit"
-          className="w-full p-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300"
-          ></button>
+                <button
+                    type="submit"
+                    className="w-full p-3 bg-blue-3 text-white rounded hover:scale-105 transition transform md:w-1/3"
+                >
+                    Regístrate
+                </button>
             </form>
         </div>
+
     );
+
 };
 
 export default Register;

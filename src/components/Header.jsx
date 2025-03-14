@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import HomeIcon from "../assets/img/home-icon.svg";
+import NavButton from "./NavButton";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú hamburguesa
@@ -51,7 +52,7 @@ const Header = () => {
           item.dropdown ? (
             <Dropdown key={item.name} tabs={item} />
           ) : (
-            <Link key={item.path} to={item.path} className="hover:text-gray-400">
+            <Link key={item.path} to={item.path} className="hover:underline">
               {item.name}
             </Link>
           )
@@ -60,12 +61,14 @@ const Header = () => {
 
       {/* buttons for long screens */}
       <div className="hidden md:flex space-x-4">
-        <button className="border-1 border-blue-3 text-blue-3 text-xs bg-white rounded-md p-2 transition transform hover:scale-110">
+        <NavButton to="/login" className="border-1 border-blue-3 text-blue-3 text-xs bg-white 
+        rounded-md p-2 transition transform hover:scale-110">
           Inicia Sesión
-        </button>
-        <button className="text-white text-xs bg-blue-3 rounded-md p-2 transition transform hover:scale-110">
+        </NavButton>
+        <NavButton to="/registro" className="text-white text-xs bg-blue-3 ç
+        rounded-md p-2 transition transform hover:scale-110">
           Registro
-        </button>
+        </NavButton>
       </div>
 
       {/* nav menu with buttons for small screens */}
@@ -103,20 +106,25 @@ const Header = () => {
               </div>
             ))}
           </nav>
-          <div className="flex flex-col space-y-2 p-4">
-            <button
-              className="border-1 border-blue-3 text-blue-3 text-xs bg-white rounded-md mx-2 p-2 transition transform hover:scale-105"
-              onClick={() => setIsMenuOpen(false)} 
-            >
-              Inicia Sesión
-            </button>
-            <button
-              className="text-white text-xs bg-blue-3 rounded-md mx-2 p-2 transition transform hover:scale-105"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Registro
-            </button>
-          </div>
+          <div className="flex flex-col space-y-2 p-4 px-6">
+  <NavButton
+    to="/login"
+    className="border border-blue-3 text-blue-3 text-xs bg-white 
+    w-full rounded-md p-2 transition transform hover:scale-105"
+    onClickCloseMenu={() => setIsMenuOpen(false)}
+  >
+    Inicia Sesión
+  </NavButton>
+  <NavButton
+    to="/registro"
+    className="text-white text-xs bg-blue-3 
+    w-full rounded-md p-2 transition transform hover:scale-105"
+    onClickCloseMenu={() => setIsMenuOpen(false)}
+  >
+    Registro
+  </NavButton>
+</div>
+
         </div>
       )}
     </header>
