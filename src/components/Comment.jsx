@@ -20,7 +20,6 @@ function CommentBox() {
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       ></textarea>
-      {/* Star Rating */}
       <div className="flex items-center mt-3">
         <span className="text-lg font-medium mr-2">Rating:</span>
         {[1, 2, 3, 4, 5].map((star) => (
@@ -41,7 +40,6 @@ function CommentBox() {
       >
         Submit
       </button>
-      {/* Comment List */}
       <div className="mt-5">
         <h3 className="text-lg font-medium">Comments:</h3>
         {comments.length === 0 ? (

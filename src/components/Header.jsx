@@ -5,7 +5,7 @@ import HomeIcon from "../assets/img/home-icon.svg";
 import NavButton from "./NavButton";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú hamburguesa
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     {
@@ -53,7 +53,6 @@ const Header = () => {
         </svg>
       </button>
 
-      {/* nav for long screens */}
       <nav className="hidden md:flex space-x-6 relative">
         {navItems.map((item) =>
           item.dropdown ? (
@@ -66,7 +65,6 @@ const Header = () => {
         )}
       </nav>
 
-      {/* buttons for long screens */}
       <div className="hidden md:flex space-x-4">
         <NavButton
           to="/login"
@@ -84,7 +82,6 @@ const Header = () => {
         </NavButton>
       </div>
 
-      {/* nav menu with buttons for small screens */}
       {isMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-blue-1 shadow-lg md:hidden z-50">
           <nav className="flex flex-col p-4 space-y-3">
