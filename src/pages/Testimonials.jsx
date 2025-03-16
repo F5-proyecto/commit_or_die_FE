@@ -2,17 +2,16 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-coverflow"; // Importamos el efecto
+import "swiper/css/effect-coverflow";
 
 import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
 import TestimonialCard from "../components/TestimonialCard";
-import "../styles/swiperStyles.css"; // Archivo de estilos
+import "../styles/swiperStyles.css";
 
 
 
 const Testimonials = () => {
 
-    //hay que traerselo del back y mapearlo
     const testimonials = [
         { name: "Marcos Fernández", content: "Muy buenos cursos." },
         { name: "María García", content: "Me encanta TechCodeLab :)" },

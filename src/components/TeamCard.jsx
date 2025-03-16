@@ -30,7 +30,6 @@ const TeamCard = ({ name, role, image, linkedin }) => {
 
       <hr className="my-4 border-blue-3" />
 
-      {/* Rol */}
       <p className="text-blue-2 h-12 text-lg">{role}</p>
     </div>
   );
