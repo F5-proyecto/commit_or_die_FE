@@ -22,7 +22,7 @@ const CommentBox = () => {
       content: comment,
       publicationDate: new Date().toISOString(),
       rating,
-      resourceId: "course123", 
+      resourceId: "Tdd", 
       user: { id: userId }
     };
 
