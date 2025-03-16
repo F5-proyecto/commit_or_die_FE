@@ -21,7 +21,7 @@ Make sure you have React and Node.js installed
 
 ## Required documentation 
 - [![Organization](https://img.shields.io/badge/-Jira-0052CC?logo=jira&logoColor=white&style=flat)](https://celiagarridoherrera.atlassian.net/jira/software/projects/ER/boards/69/backlog)
-<img width="776" alt="Jira-commit-or-die" src="https://github.com/user-attachments/assets/ed5088bf-640a-4237-a7e5-17a5bdd4e8fb" />
+![Jira](https://github.com/user-attachments/assets/0e356f50-a395-452a-8f83-1e31ed233c43)
 
 - [![Figma](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white&style=flat)](https://www.figma.com/design/Z97X0fiADBEGLgw5xs69Hr/RecursosApp?node-id=2-219&t=DxuXbIgyjwmfArjI-0)
 
