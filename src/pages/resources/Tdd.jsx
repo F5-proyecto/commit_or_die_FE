@@ -7,6 +7,7 @@ import FinishResource from "../../components/FinishResource";
 const TddResource = () => {
   
 const [content, setContent] = useState("");
+const courseTitle = "TDD";
 
 useEffect(() => {
   fetch("/assets/CoursesTdd/CourseTdd.md")
@@ -19,7 +20,11 @@ useEffect(() => {
       <h1 className="text-blue-3 text-center text-6xl font-bold mt-30 font-briem-hand">TDD</h1>
    
       <pre>{content}</pre>
-      <FinishResource lessonId={1} lessonTitle="Tarea completada" />
+      <FinishResource
+        lessonId={1}
+        lessonTitle="Tarea completada"
+        courseTitle={courseTitle} // Pasamos el courseTitle
+      />
       <CommentBox />
     </div>
   );

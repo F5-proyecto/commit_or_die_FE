@@ -7,6 +7,7 @@ import FinishResource from "../../components/FinishResource";
 const FrontendCss = () => {
   
 const [content, setContent] = useState("");
+const courseTitle = "CSS";
 
 useEffect(() => {
   fetch("/assets/CoursesFrontend/CourseCss.md")
@@ -19,7 +20,11 @@ useEffect(() => {
       <h1 className="text-blue-3 text-center text-6xl font-bold mt-30 font-briem-hand mb-20">Frontend Course CSS</h1>
    
       <pre>{content}</pre>
-      <FinishResource lessonId={1} lessonTitle="Tarea completada" />
+      <FinishResource 
+      lessonId={1}
+       lessonTitle="Tarea completada"
+       courseTitle={courseTitle} 
+        />
       <CommentBox />
     </div>
   );

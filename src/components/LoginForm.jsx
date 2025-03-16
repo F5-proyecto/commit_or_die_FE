@@ -35,6 +35,8 @@ const LoginForm = () => {
             const data = await response.json();
             console.log("Login successful:", data);
 
+            localStorage.setItem("userId", data.userId);
+
             navigate("/");
 
         } catch (error) {

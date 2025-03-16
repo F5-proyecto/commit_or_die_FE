@@ -7,6 +7,7 @@ import FinishResource from "../../components/FinishResource";
 const IntroBackend = () => {
   
 const [content, setContent] = useState("");
+const courseTitle = "INTRODUCTION TO BACKEND";
 
 useEffect(() => {
   fetch("/assets/CoursesBackend/CourseIntroductionBackend.md")
@@ -19,7 +20,11 @@ useEffect(() => {
       <h1 className="text-blue-3 text-center text-6xl font-bold mt-30 font-briem-hand mb-20">Introduction to Backend</h1>
    
       <pre>{content}</pre>
-      <FinishResource lessonId={1} lessonTitle="Tarea completada" />
+      <FinishResource 
+        lessonId={1} 
+        lessonTitle="Tarea completada"
+        courseTitle={courseTitle} 
+      />
       <CommentBox />
     </div>
   );
