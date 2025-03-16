@@ -5,24 +5,24 @@ const CommentBox = () => {
   const [rating, setRating] = useState(0);
   const [comments, setComments] = useState([]);
 
-  // Puedes cargar los comentarios del backend si lo deseas en un useEffect
+
 
   const handleAddComment = async () => {
     if (comment.trim() === "" || rating === 0) return;
     
-    // Obtener userId de localStorage
+  
     const userId = localStorage.getItem("userId");
     if (!userId) {
       alert("Debes estar logueado para comentar.");
       return;
     }
     
-    // Construir el payload para el comentario
+
     const newCommentPayload = {
       content: comment,
       publicationDate: new Date().toISOString(),
       rating,
-      resourceId: "course123", // Ajusta según tu lógica; puede ser el identificador o título del curso.
+      resourceId: "course123", 
       user: { id: userId }
     };
 
@@ -37,7 +37,7 @@ const CommentBox = () => {
       }
       const createdComment = await response.json();
       console.log("Comentario creado:", createdComment);
-      // Actualizar la lista de comentarios si lo deseas
+ 
       setComments([...comments, createdComment]);
       setComment("");
       setRating(0);
