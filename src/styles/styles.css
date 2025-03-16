@@ -1,1 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Afacad:regular,500,600,700,italic,500italic,600italic,700italic);  
 @import "tailwindcss";
+
+@font-face {
+    font-family: "briem-hand";
+    src: url("../assets/fonts/BriemHand-Bold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+  @theme {
+
+    --font-briem-hand: "briem-hand", sans-serif;
+    --font-afacad: "Afacad", sans-serif;
+
+    --color-blue-1: #acbdd3;
+    --color-blue-2: #5d80b6;
+    --color-blue-3: #101e5a;
+    --color-aqua: #99f5c6;
+
+}
+
+@layer base{
+    * {
+        @apply m-0 p-0 box-border;
+    }
+}
+
+.main-layout {
+  @apply min-h-screen bg-blue-1 bg-no-repeat bg-cover;
+  background-image: url("../assets/img/bg.svg");
+}
+
+.form-bg {
+  @apply bg-no-repeat bg-cover;
+  background-image: url("../assets/img/form-bg.svg");
+}
+
+.button-custom {
+    padding: 8px; 
+    border-radius: 8px; 
+    font-size: 1.125rem;
+    transition: transform 0.3s ease; 
+  }
+  
+  .button-custom:hover {
+    transform: scale(1.1); 
+  }
+  
