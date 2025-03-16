@@ -24,16 +24,18 @@ const Header = () => {
 
   return (
     <header className="relative flex items-center justify-between p-4 bg-blue-1 text-blue-3 font-afacad border-b-2 border-blue-3">
-
-      <Link to="/" className="flex items-center space-x-2 transition transform hover:scale-110">
+      <Link
+        to="/"
+        className="flex items-center space-x-2 transition transform hover:scale-110"
+      >
         <img src={HomeIcon} alt="Home" className="w-6 h-6" />
       </Link>
 
       <button
         className="block md:hidden focus:outline-none"
         onClick={() => {
-            setIsMenuOpen(!isMenuOpen);
-          }}
+          setIsMenuOpen(!isMenuOpen);
+        }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +44,12 @@ const Header = () => {
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
         </svg>
       </button>
 
@@ -61,12 +68,18 @@ const Header = () => {
 
       {/* buttons for long screens */}
       <div className="hidden md:flex space-x-4">
-        <NavButton to="/login" className="border-1 border-blue-3 text-blue-3 text-xs bg-white 
-        rounded-md p-2 transition transform hover:scale-110">
+        <NavButton
+          to="/login"
+          className="border-1 border-blue-3 text-blue-3 text-xs bg-white 
+        rounded-md p-2 transition transform hover:scale-110 cursor-pointer"
+        >
           Inicia Sesión
         </NavButton>
-        <NavButton to="/registro" className="text-white text-xs bg-blue-3 ç
-        rounded-md p-2 transition transform hover:scale-110">
+        <NavButton
+          to="/registro"
+          className="text-white text-xs bg-blue-3 ç
+        rounded-md p-2 transition transform hover:scale-110 cursor-pointer"
+        >
           Registro
         </NavButton>
       </div>
@@ -86,7 +99,7 @@ const Header = () => {
                           key={subItem.path}
                           to={subItem.path}
                           className="hover:underline text-lg"
-                          onClick={() => setIsMenuOpen(false)} 
+                          onClick={() => setIsMenuOpen(false)}
                         >
                           {subItem.name}
                         </Link>
@@ -98,7 +111,7 @@ const Header = () => {
                     key={item.path}
                     to={item.path}
                     className="hover:underline text-lg"
-                    onClick={() => setIsMenuOpen(false)} 
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
@@ -107,24 +120,23 @@ const Header = () => {
             ))}
           </nav>
           <div className="flex flex-col space-y-2 p-4 px-6">
-  <NavButton
-    to="/login"
-    className="border border-blue-3 text-blue-3 text-xs bg-white 
+            <NavButton
+              to="/login"
+              className="border border-blue-3 text-blue-3 text-xs bg-white 
     w-full rounded-md p-2 transition transform hover:scale-105"
-    onClickCloseMenu={() => setIsMenuOpen(false)}
-  >
-    Inicia Sesión
-  </NavButton>
-  <NavButton
-    to="/registro"
-    className="text-white text-xs bg-blue-3 
+              onClickCloseMenu={() => setIsMenuOpen(false)}
+            >
+              Inicia Sesión
+            </NavButton>
+            <NavButton
+              to="/registro"
+              className="text-white text-xs bg-blue-3 
     w-full rounded-md p-2 transition transform hover:scale-105"
-    onClickCloseMenu={() => setIsMenuOpen(false)}
-  >
-    Registro
-  </NavButton>
-</div>
-
+              onClickCloseMenu={() => setIsMenuOpen(false)}
+            >
+              Registro
+            </NavButton>
+          </div>
         </div>
       )}
     </header>
