@@ -1,16 +1,4 @@
-# Curso Básico de TDD (Test-Driven Development)
-
 Bienvenidos al curso básico de TDD. En este curso aprenderás los fundamentos del desarrollo basado en pruebas y cómo aplicarlo para escribir código más confiable y de alta calidad.
-
-## Tabla de Contenidos
-
-1. [¿Qué es TDD?](#qué-es-tdd)
-2. [Ciclo de TDD](#ciclo-de-tdd)
-3. [Escribir una prueba](#escribir-una-prueba)
-4. [Refactorización](#refactorización)
-5. [Ventajas de TDD](#ventajas-de-tdd)
-6. [Herramientas para TDD](#herramientas-para-tdd)
-7. [Buenas Prácticas en TDD](#buenas-prácticas-en-tdd)
 
 ---
 

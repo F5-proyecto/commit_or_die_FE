@@ -10,7 +10,7 @@ const CoursesTddPage = () => {
         Testing
       </h1>
       <div className="flex items-center justify-between bg-white rounded-2xl shadow-lg p-8 w-full max-w-4xl mx-auto mt-40 h-40">
-        <h2 className="font-bold text-2xl">Test Driven Development (TDD)</h2>
+        <h2 className="font-bold text-2xl font-briem-hand">Test Driven Development (TDD)</h2>
         <Link to="/services/testing/tdd">
           {" "}
           <button className="bg-blue-3 text-white text-lg font-medium px-6 py-3 rounded-lg  button-custom cursor-pointer">

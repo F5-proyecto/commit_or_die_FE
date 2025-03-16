@@ -10,7 +10,7 @@ const CoursesBackendPage = () => {
         Backend
       </h1>
       <div className="flex items-center justify-between bg-white rounded-2xl shadow-lg p-8 w-full max-w-4xl mx-auto mt-20 h-40">
-        <h2 className="font-bold text-2xl">Introduction to Backend</h2>
+        <h2 className="font-bold text-2xl font-briem-hand">Introducción al Backend</h2>
         <Link to="/services/back-end/be1">
           {" "}
           <button className="bg-blue-3 text-white text-lg font-medium px-6 py-3 rounded-lg  button-custom cursor-pointer">
@@ -19,7 +19,7 @@ const CoursesBackendPage = () => {
         </Link>
       </div>
       <div className="flex items-center justify-between bg-white rounded-2xl shadow-lg p-8 w-full max-w-4xl mx-auto mt-20 h-40">
-        <h2 className="font-bold text-2xl">Development Language Backend</h2>
+        <h2 className="font-bold text-2xl font-briem-hand">Lenguaje de desarrollo Backend</h2>
         <Link to="/services/back-end/be2">
           {" "}
           <button className="bg-blue-3 text-white text-lg font-medium px-6 py-3 rounded-lg  button-custom cursor-pointer">
