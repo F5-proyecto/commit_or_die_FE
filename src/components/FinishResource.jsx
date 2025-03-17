@@ -21,16 +21,16 @@ const FinishResource = ({ lessonId, lessonTitle, courseTitle }) => {
       return;
     }
 
-    const courseId = courseTitle; // Usamos el título como courseId por ahora
+    const courseId = courseTitle;
     const progressKey = `progress-${courseId}-${loggedUserId}`;
     const progressId = localStorage.getItem(progressKey);
 
     console.log("courseTitle:", courseTitle);
 
     const payload = {
-      user: { id: Number(loggedUserId) }, // Convertimos a número para coincidir con Long
+      user: { id: Number(loggedUserId) },
       courseId: courseTitle,
-      progressPercentage: newStatus ? 100.0 : 0.0, // Suponemos una lección por curso
+      progressPercentage: newStatus ? 100.0 : 0.0,
       completedLessonsCount: newStatus ? 1 : 0
     };
 
